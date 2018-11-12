@@ -1,0 +1,23 @@
+{
+  "name": "react-native-device-info-woogie",
+  "version": "1.0.0",
+  "description": "Get device information using react-native\n Permission issues have been fixed in Android M(23) and above.",
+  "main": "deviceinfo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimWoogie/react-native-device-info-woogie.git"
+  },
+  "keywords": [
+    "android",
+    "permission"
+  ],
+  "author": "KimWoogie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KimWoogie/react-native-device-info-woogie/issues"
+  },
+  "homepage": "https://github.com/KimWoogie/react-native-device-info-woogie#readme"
+}
