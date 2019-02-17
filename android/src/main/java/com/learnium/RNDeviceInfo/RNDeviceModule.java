@@ -1,5 +1,7 @@
 package com.learnium.RNDeviceInfo;
 
+import android.Manifest;
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -92,8 +94,8 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
      * android.permission.READ_PHONE_STATE 권한이 없을 경우 장치 ID를 가져오지 못해서 exception이 발생하므로 분기 처리
      * permission : Marshmallow(23) 이상
      */
-    if(Build.VERSION.SDK_INT>Build.VERSION_CODES.LOLLIPOP_MR1) {
-      if(ContextCompat.checkSelfPermission(getCurrentActivity(), "android.permission.READ_PHONE_STATE") != PackageManager.PERMISSION_DENIED){
+    if(Build.VERSION_CODES.M <= Build.VERSION.SDK_INT){
+      if(ContextCompat.checkSelfPermission(reactContext, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_DENIED){
         constants.put("deviceId", mTelephonyMgr.getDeviceId());
         constants.put("phoneNumber", mTelephonyMgr.getLine1Number());
       }else{
